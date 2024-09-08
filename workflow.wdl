@@ -25,7 +25,6 @@ workflow dropGT_VCFs {
 task run_dropping {
 	input {
 		File vcf
-		File region
 		Int memSizeGB = 8
 		Int threadCount = 2
 		Int diskSizeGB = 8*round(size(vcf, "GB")) + 20
